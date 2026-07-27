@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeHnoC — техніка, яка випереджає час</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+
+  <!-- ===== ТОП-ХЕДЕР ===== -->
+  <div class="top-header">
+    <div class="container top-header-inner">
+      <div class="top-header-left">
+        <span>📞 <a href="tel:+380800000000">0 800 000 000</a></span>
+        <span>✉️ <a href="mailto:hello@tehnoc.ua">hello@tehnoc.ua</a></span>
+      </div>
+      <div class="top-header-right">
+        <span>🕐 Пн–Пт: 9:00–20:00</span>
+        <span>📍 м. Київ, вул. Технічна, 1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ОСНОВНИЙ ХЕДЕР ===== -->
+  <header>
+    <div class="container header-inner">
+      <!-- ===== ЛОГОТИП ===== -->
+      <div class="logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 17V7l8-4 8 4v10l-8 4-8-4Z" />
+            <path d="M4 7l8 4 8-4M12 11v10" />
+          </svg>
+        </span>
+        <div class="logo-wrapper">
+          <span class="logo-main">TeHnoC</span>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-sub-wrapper">
+          <span class="logo-sub">Магазин<br />Комісійних<br />Товарів</span>
+        </div>
+      </div>
+
+      <!-- ===== ПОШУК + КОНСУЛЬТАЦІЯ ===== -->
+      <div class="search-wrapper">
+        <form class="search-form" onsubmit="return false;">
+          <input type="text" class="search-input" placeholder="Пошук товарів..." />
+          <button class="search-btn" aria-label="Пошук">
+            <svg class="icon" viewBox="0 0 24 24" style="width:18px;height:18px;">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+          </button>
+        </form>
+        <button class="btn btn-consult">
+          <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <path d="M8 10h.01"/>
+            <path d="M12 10h.01"/>
+            <path d="M16 10h.01"/>
+          </svg>
+          Консультація
+        </button>
+      </div>
+
+      <!-- ===== НАВІГАЦІЯ ===== -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Про нас</a></li>
+          <li><a href="#promo">Акції</a></li>
+          <li><a href="#">Оплата та доставка</a></li>
+          <li><a href="#">Контакти</a></li>
+          <li><a href="#">Гарантія</a></li>
+          <li><a href="#">Повернення</a></li>
+          <li><a href="#">Разом дешевше</a></li>
+          <li><a href="#">Уцінка</a></li>
+          <li><a href="#">Новинки</a></li>
+        </ul>
+      </nav>
+
+      <!-- ===== ПРАВИЙ БЛОК ===== -->
+      <div class="header-actions">
+        <button class="btn btn-ghost">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 21a8 8 0 1 0-16 0" /><circle cx="12" cy="7" r="4" /></svg>
+          Увійти
+        </button>
+        <button class="icon-btn" aria-label="Кошик">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" /></svg>
+          <span class="cart-badge">3</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Нова колекція 2026</div>
+        <h1>Технології, які <em>випереджають</em> час</h1>
+        <p class="hero-sub">Смартфони, ноутбуки, ПК та аксесуари від перевірених брендів — з офіційною гарантією та доставкою по всій Україні за 24 години.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary">Обрати техніку
+            <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#fff"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </button>
+          <button class="btn btn-ghost">Дивитись акції</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>4200+</b><span>товарів у каталозі</span></div>
+          <div class="hero-stat"><b>98%</b><span>задоволених клієнтів</span></div>
+          <div class="hero-stat"><b>24 год</b><span>доставка по Україні</span></div>
+        </div>
+      </div>
+      <div class="hero-banner">
+        <div class="hero-banner-card">
+          <div class="floating-chip chip-1" id="timer">⏳ Завантаження...</div>
+          <div class="floating-chip chip-2">−25% сьогодні</div>
+          <div class="device-cluster">
+            <svg class="device laptop" viewBox="0 0 300 190" fill="none">
+              <rect x="20" y="10" width="260" height="150" rx="14" fill="#1d1b26" />
+              <rect x="30" y="20" width="240" height="130" rx="6" fill="url(#scr)" />
+              <defs><linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6ff0"/><stop offset="1" stop-color="#6a4ad6"/></linearGradient></defs>
+              <path d="M0 160h300l-16 20H16Z" fill="#2c2a38" />
+            </svg>
+            <svg class="device phone" viewBox="0 0 100 200" fill="none">
+              <rect x="2" y="2" width="96" height="196" rx="22" fill="#1d1b26" stroke="#3a3350" stroke-width="2" />
+              <rect x="9" y="9" width="82" height="182" rx="16" fill="url(#scr2)" />
+              <defs><linearGradient id="scr2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0dafe"/><stop offset="1" stop-color="#fff"/></linearGradient></defs>
+            </svg>
+            <svg class="device buds" viewBox="0 0 60 60" fill="none">
+              <circle cx="30" cy="30" r="28" fill="#fff" stroke="#e8e6f0" stroke-width="2" />
+              <circle cx="22" cy="26" r="6" fill="#8b6ff0" />
+              <circle cx="38" cy="34" r="6" fill="#6a4ad6" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">Каталог</div><h2>Обирайте за категорією</h2></div>
+        <a class="see-all" href="#">Весь каталог <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section id="products">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">Каталог товарів</div><h2>Популярні товари</h2></div>
+      </div>
+      <div class="shop-layout">
+        <div class="shop-main">
+          <div class="toolbar">
+            <div class="toolbar-left">Знайдено <b>128</b> товарів</div>
+            <div class="view-switch">
+              <span class="label">Вид:</span>
+              <button class="view-btn" data-cols="1">1</button>
+              <button class="view-btn" data-cols="2">2</button>
+              <button class="view-btn" data-cols="3">3</button>
+              <button class="view-btn" data-cols="4">4</button>
+              <button class="view-btn active" data-cols="5">5</button>
+            </div>
+          </div>
+          <div class="product-grid" data-cols="5" id="productGrid"></div>
+        </div>
+        <aside class="sidebar">
+          <div class="side-block">
+            <div class="side-title">Сортування</div>
+            <select class="sort-select">
+              <option>За популярністю</option>
+              <option>Дешевші спочатку</option>
+              <option>Дорожчі спочатку</option>
+              <option>Новинки</option>
+            </select>
+          </div>
+          <div class="side-block">
+            <div class="side-title">Ціна, ₴</div>
+            <div class="range-fake"></div>
+            <div class="range-labels"><span>500</span><span>85 000</span></div>
+          </div>
+          <div class="side-block">
+  <div class="side-title">Фільтри</div>
+  <div class="filter-list">
+    <!-- СТАН -->
+    <label style="font-weight:600;color:var(--ink);margin-top:4px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Стан</label>
+    <label><input type="checkbox" checked /> Нове</label>
+    <label><input type="checkbox" /> Вживане Б/В</label>
+    <label><input type="checkbox" /> Відновлене</label>
+
+    <!-- ЦІНА -->
+    <label style="font-weight:600;color:var(--ink);margin-top:8px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Ціна</label>
+    <label><input type="checkbox" /> До 1 000 ₴</label>
+    <label><input type="checkbox" /> 1 000 - 5 000 ₴</label>
+    <label><input type="checkbox" /> 5 000 - 15 000 ₴</label>
+    <label><input type="checkbox" /> Від 15 000 ₴</label>
+
+    <!-- НАЯВНІСТЬ -->
+    <label style="font-weight:600;color:var(--ink);margin-top:8px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Наявність</label>
+    <label><input type="checkbox" checked /> В наявності</label>
+    <label><input type="checkbox" /> Під замовлення</label>
+
+    <!-- БРЕНД -->
+    <label style="font-weight:600;color:var(--ink);margin-top:8px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Бренд</label>
+    <label><input type="checkbox" /> Xiaomi</label>
+    <label><input type="checkbox" /> Samsung</label>
+    <label><input type="checkbox" /> Apple</label>
+    <label><input type="checkbox" /> Nike</label>
+    <label><input type="checkbox" /> Adidas</label>
+    <label><input type="checkbox" /> Інші</label>
+  </div>
+</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMO ===== -->
+  <section id="promo">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">Спецпропозиції</div><h2>Акції тижня</h2></div>
+      </div>
+      <div class="promo-grid">
+        <div class="promo p1">
+          <div class="promo-orb"></div>
+          <div>
+            <div class="promo-eyebrow">Разом дешевше</div>
+            <h3>До −30% на комплекти</h3>
+            <p>Ноутбук + аксесуари — за ціною одного ноутбука.</p>
+          </div>
+          <button class="btn btn-primary">Зібрати комплект</button>
+        </div>
+        <div class="promo p2">
+          <div class="promo-orb" style="background:radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);"></div>
+          <div>
+            <div class="promo-eyebrow">Уцінка</div>
+            <h3>Техніка з вітрини −40%</h3>
+            <p>Обмежена кількість, гарантія збережена.</p>
+          </div>
+          <button class="btn btn-lav">Переглянути</button>
+        </div>
+        <div class="promo p3">
+          <div class="promo-orb"></div>
+          <div>
+            <div class="promo-eyebrow">Новинки</div>
+            <h3>Флагманські смартфони</h3>
+            <p>Попереднє замовлення з подарунком.</p>
+          </div>
+          <button class="btn btn-ghost">Замовити зараз</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PCS ===== -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">Підбірка</div><h2>Гарячі пропозиції</h2></div>
+        <a class="see-all" href="#">Усі знижки <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+      </div>
+      <div class="pc-grid" id="pcGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section>
+    <div class="container">
+      <div class="strip">
+        <div>
+          <h3>Дізнавайтесь про акції першими</h3>
+          <p>Знижки, новинки та ексклюзивні пропозиції щотижня на пошту.</p>
+        </div>
+        <form onsubmit="return false;">
+          <input type="email" placeholder="your@email.com" required />
+          <button class="btn btn-lav">Підписатись</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="display:flex;align-items:center;gap:8px;">
+            <span class="logo-mark" style="width:34px;height:34px;border-radius:10px;background:linear-gradient(145deg,var(--lav-500),var(--lav-700));display:flex;align-items:center;justify-content:center;">
+              <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:#fff;">
+                <path d="M4 17V7l8-4 8 4v10l-8 4-8-4Z" />
+                <path d="M4 7l8 4 8-4M12 11v10" />
+              </svg>
+            </span>
+            TeHnoC
+          </div>
+          <p>Інтернет-магазин техніки, одягу, взуття та аксесуарів з офіційною гарантією. Доставка по всій Україні.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg></a>
+            <a href="#" aria-label="Facebook"><svg class="icon" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z" /></svg></a>
+            <a href="#" aria-label="Telegram"><svg class="icon" viewBox="0 0 24 24"><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4Z" /></svg></a>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h5>Компанія</h5>
+          <ul><li><a href="#">Про нас</a></li><li><a href="#">Новинки</a></li><li><a href="#">Уцінка</a></li></ul>
+        </div>
+        <div class="foot-col">
+          <h5>Покупцям</h5>
+          <ul><li><a href="#">Оплата та доставка</a></li><li><a href="#">Гарантія</a></li><li><a href="#">Повернення</a></li></ul>
+        </div>
+        <div class="foot-col">
+          <h5>Контакти</h5>
+          <ul><li><a href="tel:+380800000000">0 800 000 000</a></li><li><a href="mailto:hello@tehnoc.ua">hello@tehnoc.ua</a></li><li><a href="#">м. Київ, вул. Технічна, 1</a></li></ul>
+        </div>
+        <div class="foot-col">
+          <h5>Графік</h5>
+          <ul><li><a href="#">Пн–Пт: 9:00–20:00</a></li><li><a href="#">Сб–Нд: 10:00–18:00</a></li></ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 TeHnoC. Усі права захищені.</span>
+        <div class="legal">
+          <a href="#">Політика конфіденційності</a>
+          <a href="#">Умови користування</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== ТАЙМЕР =====
+    const deadline = new Date(2026, 6, 31, 23, 59);
+
+    function updateTimer() {
+      const now = new Date();
+      const diff = deadline - now;
+      if (diff <= 0) {
+        document.getElementById('timer').textContent = 'Акція завершена!';
+        return;
+      }
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+      const m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      const s = Math.floor((diff % (1000*60)) / 1000);
+      document.getElementById('timer').innerHTML = `
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
+          <span style="font-size:9px;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em;font-weight:400;">До кінця акції залишилось</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--lav-700);">
+            ${String(d).padStart(2, '0')}д ${String(h).padStart(2, '0')}год ${String(m).padStart(2, '0')}хв ${String(s).padStart(2, '0')}с
+          </span>
+        </div>
+      `;
+    }
+    updateTimer();
+    setInterval(updateTimer, 1000);
+
+    // ===== ІКОНКИ, ДАНІ, РЕНДЕРИНГ =====
+    const ICONS = {
+      phone: '<rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/>',
+      laptop: '<rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M1 20h22l-2-4H3Z"/>',
+      desktop: '<rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M9 20h6M12 15v5"/>',
+      headphones: '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2" y="14" width="5" height="7" rx="1.5"/><rect x="17" y="14" width="5" height="7" rx="1.5"/>',
+      tablet: '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/>',
+      watch: '<rect x="8" y="7" width="8" height="10" rx="2.5"/><path d="M9 7V4h6v3M9 17v3h6v-3"/>',
+      speaker: '<rect x="6" y="2" width="12" height="20" rx="2.5"/><circle cx="12" cy="8" r="2"/><circle cx="12" cy="16" r="3.5"/>',
+      home: '<path d="M4 11 12 4l8 7"/><path d="M6 10v10h12V10"/><rect x="10" y="14" width="4" height="6"/>',
+      cart: '<circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>',
+      star: '<path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7L2 9.2l7.1-.6Z"/>',
+      shirt: '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4l4-2 4 2"/>',
+      shoe: '<path d="M4 16l2-8h12l2 8"/><path d="M2 16h20v4H2z"/>',
+      target: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+      bag: '<rect x="6" y="6" width="12" height="14" rx="2"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>',
+      case: '<rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/>',
+    };
+
+    function icon(name, extra = '') {
+      return `<svg class="icon" viewBox="0 0 24 24" ${extra}>${ICONS[name]}</svg>`;
+    }
+
+    function money(n) {
+      return n.toLocaleString('uk-UA');
+    }
+
+    const categories = [
+      { icon: 'phone', name: 'Електроніка', count: '412 товарів' },
+      { icon: 'target', name: 'Полювання та риболовля', count: '167 товарів' },
+      { icon: 'shirt', name: 'Одяг', count: '312 товарів' },
+      { icon: 'shoe', name: 'Взуття', count: '245 товарів' },
+      { icon: 'bag', name: 'Чохли та сумки', count: '198 товарів' },
+      { icon: 'case', name: 'Чохли для електроніки', count: '134 товари' },
+    ];
+
+    const products = [
+      ['phone', 'Смартфон Nova X12 Pro', '6.7" AMOLED · 256GB · 5G'],
+      ['laptop', 'Ноутбук AirLine 15 Ultra', '15.6" · 16GB RAM · 512GB SSD'],
+      ['headphones', 'Навушники SonicWave Pro', 'ANC · Bluetooth 5.3 · 30г'],
+      ['desktop', 'ПК StudioForge R7', 'Ryzen 7 · 32GB · RTX 4060'],
+      ['tablet', 'Планшет FlexPad 11', '11" · 128GB · стилус'],
+      ['shirt', 'Футболка Cotton Classic', '100% бавовна · Чорний · M'],
+      ['shoe', 'Кросівки Air Runner', 'Білі · 42 · Текстиль'],
+      ['bag', 'Сумка Laptop Bag 15"', 'Шкіра · Чорна · Для ноутбука'],
+      ['case', 'Чохол iPhone 15 Pro', 'Силікон · Прозорий'],
+      ['watch', 'Годинник PulseFit Gen4', 'AMOLED · GPS · 7 днів'],
+    ];
+
+    const pcs = [
+      { name: 'Планшет FlexPad 11', category: '📟', rating: 4.7, price: 8499, oldPrice: 9999, tag: '💥 -15%' },
+      { name: 'Навушники SonicWave Pro', category: '🎧', rating: 4.8, price: 3299, oldPrice: 4299, tag: '💥 -23%' },
+      { name: 'Черевики Trek Pro', category: '👟', rating: 4.6, price: 4299, oldPrice: 5499, tag: '💥 -22%' },
+      { name: 'Сумка Laptop Bag 15"', category: '👜', rating: 4.5, price: 1899, oldPrice: 2499, tag: '💥 -24%' },
+      { name: 'Смартфон Nova X12 Pro', category: '📱', rating: 4.9, price: 12999, oldPrice: 15999, tag: '💥 -19%' },
+    ];
+
+    function renderCategories() {
+      const el = document.getElementById('catGrid');
+      if (!el) return;
+      el.innerHTML = categories.map(c => `
+        <a class="cat-card" href="#products">
+          <div class="cat-icon">${icon(c.icon)}</div>
+          <div><h4>${c.name}</h4><span>${c.count}</span></div>
+        </a>
+      `).join('');
+    }
+
+    function renderProducts() {
+      const el = document.getElementById('productGrid');
+      if (!el) return;
+      el.innerHTML = products.map((p, i) => {
+        const price = 4200 + (i * 1370 % 38000) + 2999;
+        const old = i % 3 === 0 ? price + Math.round(price * 0.18) : null;
+        const tag = i % 4 === 0 ? '<span class="p-tag new">Новинка</span>' :
+          i % 5 === 0 ? '<span class="p-tag">Хіт</span>' : '';
+        return `
+          <div class="p-card">
+            <div class="p-thumb">
+              ${tag}
+              ${icon(p[0])}
+            </div>
+            <div class="p-name">${p[1]}</div>
+            <div class="p-specs">${p[2]}</div>
+            <div class="p-bottom">
+              <div>
+                ${old ? `<span class="p-old">${money(old)} ₴</span>` : ''}
+                <span class="p-price">${money(price)} <sup>₴</sup></span>
+              </div>
+              <button class="buy-btn" aria-label="Купити">${icon('cart')}</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderPCs() {
+      const el = document.getElementById('pcGrid');
+      if (!el) return;
+      el.innerHTML = pcs.map(p => {
+        const hasOldPrice = p.oldPrice && p.oldPrice > 0;
+        return `
+          <div class="pc-card">
+            <div class="pc-thumb" style="font-size:36px;display:flex;align-items:center;justify-content:center;height:80px;background:linear-gradient(155deg,var(--lav-50),#fff);border-radius:10px;margin-bottom:10px;">${p.category}</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+              <span style="font-size:10px;background:var(--lav-50);color:var(--lav-700);padding:2px 10px;border-radius:100px;font-weight:600;">${p.tag}</span>
+              <div class="rating">
+                ${Array.from({ length: 5 }).map((_, i) =>
+                  icon('star', `style="fill:${i < Math.round(p.rating) ? 'var(--lav-500)' : 'var(--gray-line)'};width:14px;height:14px;"`)
+                ).join('')}
+                <span style="font-size:12px;color:var(--gray);margin-left:4px;">${p.rating}</span>
+              </div>
+            </div>
+            <h4 style="font-size:14px;font-weight:600;margin-bottom:4px;">${p.name}</h4>
+            <div class="pc-foot" style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;">
+              <div>
+                ${hasOldPrice ? `<span style="font-size:11px;color:var(--gray);text-decoration:line-through;display:block;">${money(p.oldPrice)} ₴</span>` : ''}
+                <span class="p-price" style="font-size:16px;font-weight:700;color:var(--ink);">${money(p.price)} <sup style="font-size:10px;color:var(--gray);">₴</sup></span>
+              </div>
+              <button class="btn btn-lav" style="padding:6px 14px;font-size:11px;border-radius:100px;">Купити</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function initViewSwitch() {
+      const grid = document.getElementById('productGrid');
+      if (!grid) return;
+      document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cols = btn.dataset.cols;
+          grid.setAttribute('data-cols', cols);
+          document.querySelectorAll('.view-btn').forEach(b =>
+            b.classList.toggle('active', b.dataset.cols === cols)
+          );
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCategories();
+      renderProducts();
+      renderPCs();
+      initViewSwitch();
+    });
+  </script>
+
+</body>
+</html>

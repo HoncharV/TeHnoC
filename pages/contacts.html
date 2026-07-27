@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакти — TeHnoC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <style>
+    .contacts-page {
+      padding: 60px 0;
+    }
+    .contacts-page h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+    .contacts-page .subtitle {
+      color: var(--gray);
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gray-line);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .contact-card:hover {
+      border-color: var(--lav-300);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .contact-card .icon-big {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .contact-card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    .contact-card p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+    .contact-card a {
+      color: var(--lav-700);
+      font-weight: 500;
+    }
+    .contact-card a:hover {
+      color: var(--lav-800);
+    }
+    .map-section {
+      background: var(--bg-card);
+      border: 1px solid var(--gray-line);
+      border-radius: var(--radius);
+      padding: 30px;
+      text-align: center;
+    }
+    .map-section .map-placeholder {
+      background: var(--lav-50);
+      border-radius: 12px;
+      padding: 60px 20px;
+      color: var(--gray);
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .contacts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <section class="contacts-page">
+    <div class="container">
+      <h1>📍 Контакти</h1>
+      <p class="subtitle">Ми завжди на зв'язку — звертайтеся будь-яким зручним способом</p>
+
+      <div class="contacts-grid">
+        <div class="contact-card">
+          <div class="icon-big">📞</div>
+          <h3>Телефон</h3>
+          <p><a href="tel:+380800000000">0 800 000 000</a></p>
+          <p style="font-size:12px;color:var(--gray);">Пн–Пт: 9:00–20:00</p>
+        </div>
+        <div class="contact-card">
+          <div class="icon-big">✉️</div>
+          <h3>Email</h3>
+          <p><a href="mailto:hello@tehnoc.ua">hello@tehnoc.ua</a></p>
+          <p style="font-size:12px;color:var(--gray);">Відповідаємо протягом 24 годин</p>
+        </div>
+        <div class="contact-card">
+          <div class="icon-big">📍</div>
+          <h3>Адреса</h3>
+          <p>м. Київ, вул. Технічна, 1</p>
+          <p style="font-size:12px;color:var(--gray);">Пн–Сб: 10:00–19:00</p>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h3 style="margin-bottom:16px;">Як нас знайти</h3>
+        <div class="map-placeholder">
+          🗺️ Тут буде карта Google Maps<br />
+          <span style="font-size:12px;">вул. Технічна, 1, Київ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('../components/header.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+    fetch('../components/footer.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('footer').innerHTML = html);
+  </script>
+</body>
+</html>

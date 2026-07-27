@@ -1,0 +1,763 @@
+/* ========== КОМПОНЕНТИ ========== */
+
+/* ========== ТОП-ХЕДЕР ========== */
+.top-header {
+  background: #0e0d1a;
+  color: #8a89a0;
+  font-size: 11px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.top-header-left,
+.top-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-header a {
+  color: #8a89a0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.top-header a:hover {
+  color: #ffffff;
+}
+
+.top-header span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ========== ОСНОВНИЙ ХЕДЕР ========== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(245, 243, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e8e6f0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 8px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ========== ЛОГОТИП ========== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #8b6ff0, #6a4ad6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-mark svg {
+  width: 16px;
+  height: 16px;
+  stroke: #fff;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-main {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.1;
+}
+
+.logo-divider {
+  width: 2px;
+  height: 28px;
+  background: #b8a6f5;
+  border-radius: 4px;
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+.logo-sub-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  justify-content: center;
+}
+
+.logo-sub {
+  font-size: 7px;
+  font-weight: 400;
+  color: #6a4ad6;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* ========== ПОШУК ========== */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 380px;
+  margin: 0 12px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e8e6f0;
+  border-radius: 100px;
+  padding: 3px 3px 3px 14px;
+  transition: all 0.3s ease;
+}
+
+.search-form:focus-within {
+  border-color: #8b6ff0;
+  box-shadow: 0 0 0 3px rgba(139, 111, 240, 0.1);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12px;
+  color: #1a1a2e;
+  padding: 6px 0;
+  font-family: 'Inter', sans-serif;
+  min-width: 80px;
+}
+
+.search-input::placeholder {
+  color: #8a8aa8;
+}
+
+.search-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #8b6ff0, #6a4ad6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.search-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(106, 74, 214, 0.3);
+}
+
+/* ========== КНОПКА КОНСУЛЬТАЦІЯ ========== */
+.btn-consult {
+  background: linear-gradient(135deg, #f0edff, #e0dafe);
+  color: #6a4ad6;
+  border: 1px solid #e0dafe;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.btn-consult:hover {
+  background: linear-gradient(135deg, #8b6ff0, #6a4ad6);
+  color: #fff;
+  border-color: #8b6ff0;
+  box-shadow: 0 4px 16px rgba(106, 74, 214, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ========== НАВІГАЦІЯ ========== */
+nav.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+nav.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav.main-nav a {
+  font-size: 10px;
+  font-weight: 500;
+  color: #4a4a6a;
+  padding: 4px 6px;
+  position: relative;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+nav.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #8b6ff0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+}
+
+nav.main-nav a:hover {
+  color: #1a1a2e;
+}
+
+nav.main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ========== ПРАВИЙ БЛОК ========== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 12.5px;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #4a4a6a;
+  border: 1px solid #e8e6f0;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.25s ease;
+}
+
+.btn-ghost:hover {
+  border-color: #8b6ff0;
+  color: #6a4ad6;
+  background: #f0edff;
+}
+
+.btn-ghost .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8b6ff0, #6a4ad6);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(106, 74, 214, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(106, 74, 214, 0.35);
+}
+
+.btn-lav {
+  background: linear-gradient(135deg, #8b6ff0, #6a4ad6);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(106, 74, 214, 0.2);
+}
+
+.btn-lav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(106, 74, 214, 0.3);
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  border: 1px solid #e8e6f0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.25s;
+  color: #4a4a6a;
+}
+
+.icon-btn:hover {
+  border-color: #8b6ff0;
+  background: #f0edff;
+  color: #6a4ad6;
+}
+
+.icon-btn .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: linear-gradient(135deg, #8b6ff0, #6a4ad6);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+/* ========== БУРГЕР-МЕНЮ ========== */
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+
+.burger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #1a1a2e;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.burger-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.burger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* ========== АДАПТИВНІСТЬ ========== */
+
+/* Планшети (до 1024px) */
+@media (max-width: 1024px) {
+  .header-inner {
+    height: 56px;
+    padding: 0 16px;
+    gap: 4px;
+  }
+
+  .search-wrapper {
+    max-width: 200px;
+    margin: 0 6px;
+  }
+
+  .search-input {
+    font-size: 11px;
+    min-width: 50px;
+  }
+
+  .search-btn {
+    width: 26px;
+    height: 26px;
+  }
+
+  .btn-consult {
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+
+  .btn-consult span {
+    display: none;
+  }
+
+  nav.main-nav ul {
+    gap: 4px;
+  }
+
+  nav.main-nav a {
+    font-size: 9px;
+    padding: 3px 4px;
+  }
+
+  .btn-ghost {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .icon-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .icon-btn .icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .cart-badge {
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+  }
+
+  .top-header {
+    font-size: 9px;
+    padding: 4px 0;
+  }
+
+  .top-header-inner {
+    padding: 0 16px;
+  }
+
+  .top-header-left,
+  .top-header-right {
+    gap: 12px;
+  }
+}
+
+/* Телефони (до 768px) */
+@media (max-width: 768px) {
+  .burger-btn {
+    display: flex;
+  }
+
+  .top-header-inner {
+    flex-direction: column;
+    gap: 2px;
+    padding: 0 16px;
+  }
+
+  .top-header-left,
+  .top-header-right {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav.main-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    padding: 80px 24px 24px;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 99;
+    overflow-y: auto;
+    display: block !important;
+  }
+
+  nav.main-nav.open {
+    left: 0;
+  }
+
+  nav.main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  nav.main-nav a {
+    font-size: 15px;
+    padding: 8px 0;
+    white-space: normal;
+  }
+
+  nav.main-nav a::after {
+    bottom: 4px;
+  }
+
+  .header-inner {
+    height: 52px;
+    padding: 0 12px;
+  }
+
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-mark svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .logo-main {
+    font-size: 15px;
+  }
+
+  .logo-sub {
+    font-size: 6px;
+  }
+
+  .logo-divider {
+    height: 20px;
+  }
+
+  .search-wrapper {
+    max-width: 130px;
+    margin: 0 4px;
+  }
+
+  .search-input {
+    font-size: 10px;
+    padding: 4px 0;
+    min-width: 30px;
+  }
+
+  .search-input::placeholder {
+    font-size: 9px;
+  }
+
+  .search-btn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .search-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .btn-consult {
+    padding: 4px 8px;
+    font-size: 9px;
+  }
+
+  .btn-consult svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .btn-ghost {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+
+  .btn-ghost .icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .btn-ghost span {
+    display: none;
+  }
+
+  .icon-btn {
+    width: 26px;
+    height: 26px;
+  }
+
+  .icon-btn .icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .cart-badge {
+    width: 14px;
+    height: 14px;
+    font-size: 7px;
+    top: -3px;
+    right: -3px;
+  }
+}
+
+/* Маленькі телефони (до 480px) */
+@media (max-width: 480px) {
+  .header-inner {
+    height: 48px;
+    padding: 0 8px;
+    gap: 2px;
+  }
+
+  .logo-mark {
+    width: 24px;
+    height: 24px;
+  }
+
+  .logo-mark svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .logo-main {
+    font-size: 13px;
+  }
+
+  .logo-sub {
+    font-size: 5px;
+  }
+
+  .logo-divider {
+    height: 16px;
+    margin: 0 1px;
+  }
+
+  .logo-wrapper {
+    line-height: 1;
+  }
+
+  .logo-sub-wrapper {
+    line-height: 1;
+  }
+
+  .search-wrapper {
+    max-width: 90px;
+    margin: 0 2px;
+  }
+
+  .search-input {
+    font-size: 8px;
+    padding: 2px 0;
+    min-width: 20px;
+  }
+
+  .search-input::placeholder {
+    font-size: 7px;
+  }
+
+  .search-btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-btn svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .btn-consult {
+    padding: 2px 6px;
+    font-size: 8px;
+  }
+
+  .btn-consult svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .btn-ghost {
+    padding: 2px 4px;
+  }
+
+  .btn-ghost .icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  .icon-btn {
+    width: 22px;
+    height: 22px;
+  }
+
+  .icon-btn .icon {
+    width: 11px;
+    height: 11px;
+  }
+
+  .cart-badge {
+    width: 12px;
+    height: 12px;
+    font-size: 6px;
+    top: -2px;
+    right: -2px;
+    border-width: 1px;
+  }
+
+  .burger-btn span {
+    width: 20px;
+    height: 2px;
+  }
+
+  .top-header {
+    font-size: 7px;
+    padding: 2px 0;
+  }
+
+  .top-header-inner {
+    padding: 0 8px;
+  }
+
+  .top-header-left,
+  .top-header-right {
+    gap: 6px;
+  }
+
+  nav.main-nav {
+    width: 80%;
+    padding: 70px 16px 16px;
+  }
+
+  nav.main-nav a {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+}
