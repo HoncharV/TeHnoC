@@ -63,28 +63,57 @@
       margin: 0 auto;
     }
 
-    /* ---- ТОП-ХЕДЕР (верхня смужка з контактами) ---- */
-    .top-header {
-      background: #0e0d1a;
-      color: #8a89a0;
-      font-size: 11px;
-      padding: 6px 0;
-      text-align: center;
-    }
-    .top-header-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
-    .top-header-left,
-    .top-header-right {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .top-header a { color: #8a89a0; }
+   /* ===== ТОП-ХЕДЕР ===== */
+.top-header {
+  background: #0e0d1a;
+  color: #8a89a0;
+  font-size: 9px;
+  padding: 4px 16px;
+  text-align: center;
+  width: 100vw !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  display: block !important;
+  position: relative !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.top-header-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 2px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.top-header-left,
+.top-header-right {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.top-header a {
+  color: #8a89a0 !important;
+  white-space: nowrap !important;
+}
+
+.top-header span {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+}
 
     /* ---- ОСНОВНИЙ ХЕДЕР (шапка з логотипом) ---- */
     header {
