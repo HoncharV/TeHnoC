@@ -77,45 +77,51 @@
     }
 
     /* ===== ТОП-ХЕДЕР ===== */
-.top-header {
-  background: #0e0d1a;
-  color: #8a89a0;
-  font-size: 9px;
-  padding: 4px 16px;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.top-header-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  width: 100%;
-  max-width: 100%;
-}
-.top-header-left,
-.top-header-right {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-.top-header a {
-  color: #8a89a0;
-  white-space: nowrap;
-}
-.top-header a:hover {
-  color: #fff;
-}
-.top-header span {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-}
+    .top-header {
+      background: #0e0d1a;
+      color: #8a89a0;
+      font-size: 9px;
+      padding: 4px 16px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      left: 0;
+      right: 0;
+    }
+    .top-header-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    .top-header-left,
+    .top-header-right {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+    .top-header a {
+      color: #8a89a0;
+      white-space: nowrap;
+    }
+    .top-header a:hover {
+      color: #fff;
+    }
+    .top-header span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
 
     /* ===== ХЕДЕР ===== */
     header {
@@ -327,7 +333,7 @@
       transform: rotate(-45deg) translate(4px, -4px);
     }
 
-    /* ===== НАВІГАЦІЯ ===== */
+    /* ===== НАВІГАЦІЯ (виправлено z-index) ===== */
     nav.main-nav {
       position: fixed;
       top: 0;
@@ -339,7 +345,7 @@
       padding: 70px 20px 20px;
       box-shadow: 4px 0 30px rgba(0, 0, 0, 0.1);
       transition: left 0.3s ease;
-      z-index: 99;
+      z-index: 9999;
       overflow-y: auto;
     }
     nav.main-nav.open {
@@ -379,6 +385,7 @@
       background: linear-gradient(135deg, var(--lav-600), var(--lav-300));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .hero-sub {
       font-size: 14px;
@@ -1013,6 +1020,58 @@
     }
     #timer span {
       font-size: 13px;
+    }
+
+    /* ===== ПРИМУСОВЕ РОЗТЯГУВАННЯ ТОП-ХЕДЕРА ===== */
+    .top-header {
+      background: #0e0d1a !important;
+      color: #8a89a0 !important;
+      font-size: 9px !important;
+      padding: 4px 16px !important;
+      text-align: center !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 100% !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      display: block !important;
+      position: relative !important;
+      left: 0 !important;
+      right: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    .top-header-inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 2px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .top-header-left,
+    .top-header-right {
+      display: flex !important;
+      gap: 10px !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      width: 100% !important;
+    }
+
+    .top-header a {
+      color: #8a89a0 !important;
+      white-space: nowrap !important;
+    }
+
+    .top-header span {
+      display: flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      white-space: nowrap !important;
     }
   </style>
 </head>
