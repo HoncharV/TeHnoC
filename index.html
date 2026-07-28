@@ -9,7 +9,30 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/components.css" />
 </head>
+
 <body>
+ <script>
+  // Функція перевірки ширини екрана
+  function checkScreenSize() {
+    if (window.innerWidth <= 768) {
+      // Якщо ми вже на мобільній версії — нічого не робимо
+      if (!window.location.href.includes('index-mobile.html')) {
+        window.location.href = "index-mobile.html";
+      }
+    } else {
+      // Якщо ми на мобільній версії, а екран став більшим — повертаємось
+      if (window.location.href.includes('index-mobile.html')) {
+        window.location.href = "index.html";
+      }
+    }
+  }
+
+  // Перевіряємо при завантаженні
+  checkScreenSize();
+
+  // Перевіряємо при зміні розміру вікна
+  window.addEventListener('resize', checkScreenSize);
+</script>
 
   <!-- ===== ТОП-ХЕДЕР ===== -->
   <div class="top-header">
@@ -188,18 +211,26 @@
           <div class="side-block">
             <div class="side-title">Фільтри</div>
             <div class="filter-list">
+              <!-- СТАН -->
+              <label style="font-weight:600;color:var(--ink);margin-top:4px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Стан</label>
               <label><input type="checkbox" checked /> Нове</label>
               <label><input type="checkbox" /> Вживане Б/В</label>
               <label><input type="checkbox" /> Відновлене</label>
-              <label style="font-weight:600;color:var(--ink);margin-top:4px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Ціна</label>
+
+              <!-- ЦІНА -->
+              <label style="font-weight:600;color:var(--ink);margin-top:8px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Ціна</label>
               <label><input type="checkbox" /> До 1 000 ₴</label>
               <label><input type="checkbox" /> 1 000 - 5 000 ₴</label>
               <label><input type="checkbox" /> 5 000 - 15 000 ₴</label>
               <label><input type="checkbox" /> Від 15 000 ₴</label>
-              <label style="font-weight:600;color:var(--ink);margin-top:4px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Наявність</label>
+
+              <!-- НАЯВНІСТЬ -->
+              <label style="font-weight:600;color:var(--ink);margin-top:8px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Наявність</label>
               <label><input type="checkbox" checked /> В наявності</label>
               <label><input type="checkbox" /> Під замовлення</label>
-              <label style="font-weight:600;color:var(--ink);margin-top:4px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Бренд</label>
+
+              <!-- БРЕНД -->
+              <label style="font-weight:600;color:var(--ink);margin-top:8px;pointer-events:none;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;">Бренд</label>
               <label><input type="checkbox" /> Xiaomi</label>
               <label><input type="checkbox" /> Samsung</label>
               <label><input type="checkbox" /> Apple</label>
@@ -370,6 +401,9 @@
       target: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
       bag: '<rect x="6" y="6" width="12" height="14" rx="2"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>',
       case: '<rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/>',
+      // Нові іконки для категорій
+      battery: '<rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 7V5h12v2"/>',
+      packaging: '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>',
     };
 
     function icon(name, extra = '') {
@@ -380,36 +414,58 @@
       return n.toLocaleString('uk-UA');
     }
 
+    // ===== НОВІ КАТЕГОРІЇ =====
     const categories = [
-      { icon: 'phone', name: 'Електроніка', count: '412 товарів' },
-      { icon: 'target', name: 'Полювання та риболовля', count: '167 товарів' },
-      { icon: 'shirt', name: 'Одяг', count: '312 товарів' },
-      { icon: 'shoe', name: 'Взуття', count: '245 товарів' },
-      { icon: 'bag', name: 'Чохли та сумки', count: '198 товарів' },
-      { icon: 'case', name: 'Чохли для електроніки', count: '134 товари' },
+      { icon: 'laptop', name: 'Електроніка та гаджети', count: '15 товарів' },
+      { icon: 'case', name: 'Аксесуари для електроніки', count: '39 товарів' },
+      { icon: 'desktop', name: 'Комп\'ютерна периферія', count: '4 товари' },
+      { icon: 'battery', name: 'Батареї та живлення', count: '3 товари' },
+      { icon: 'packaging', name: 'Пакування', count: '46 товарів' },
+      { icon: 'shirt', name: 'Одяг', count: '1 товар' },
     ];
 
+    // ===== НОВІ ТОВАРИ =====
     const products = [
-      ['phone', 'Смартфон Nova X12 Pro', '6.7" AMOLED · 256GB · 5G'],
-      ['laptop', 'Ноутбук AirLine 15 Ultra', '15.6" · 16GB RAM · 512GB SSD'],
-      ['headphones', 'Навушники SonicWave Pro', 'ANC · Bluetooth 5.3 · 30г'],
-      ['desktop', 'ПК StudioForge R7', 'Ryzen 7 · 32GB · RTX 4060'],
-      ['tablet', 'Планшет FlexPad 11', '11" · 128GB · стилус'],
-      ['shirt', 'Футболка Cotton Classic', '100% бавовна · Чорний · M'],
-      ['shoe', 'Кросівки Air Runner', 'Білі · 42 · Текстиль'],
-      ['bag', 'Сумка Laptop Bag 15"', 'Шкіра · Чорна · Для ноутбука'],
-      ['case', 'Чохол iPhone 15 Pro', 'Силікон · Прозорий'],
-      ['watch', 'Годинник PulseFit Gen4', 'AMOLED · GPS · 7 днів'],
+      // Електроніка та гаджети
+      ['laptop', 'Ноутбук', '12 одиниць'],
+      ['phone', 'Геймпад', '1 одиниця'],
+      ['speaker', 'Зубна щітка', '1 одиниця'],
+      ['home', 'Нічник', '1 одиниця'],
+      
+      // Аксесуари для електроніки
+      ['case', 'Захисне скло', '11 одиниць'],
+      ['case', 'Перехідник', '11 одиниць'],
+      ['case', 'Кабель', '11 одиниць'],
+      ['case', 'Чохол', '3 одиниці'],
+      ['case', 'Захисна плівка', '3 одиниці'],
+      ['case', 'Мережевий адаптер', '1 одиниця'],
+      
+      // Комп'ютерна периферія
+      ['desktop', 'Клавіатура', '2 одиниці'],
+      ['desktop', 'Миша', '2 одиниці'],
+      
+      // Батареї та живлення
+      ['battery', 'Power bank', '1 одиниця'],
+      ['battery', 'Батарейка', '1 одиниця'],
+      ['battery', 'Термопаста', '1 одиниця'],
+      
+      // Пакування
+      ['packaging', 'Коробка', '46 одиниць'],
+      
+      // Одяг
+      ['shirt', 'Шапка', '1 одиниця'],
     ];
 
+    // ===== ГАРЯЧІ ПРОПОЗИЦІЇ =====
     const pcs = [
-      { name: 'Планшет FlexPad 11', category: '📟', rating: 4.7, price: 8499, oldPrice: 9999, tag: '💥 -15%' },
-      { name: 'Навушники SonicWave Pro', category: '🎧', rating: 4.8, price: 3299, oldPrice: 4299, tag: '💥 -23%' },
-      { name: 'Черевики Trek Pro', category: '👟', rating: 4.6, price: 4299, oldPrice: 5499, tag: '💥 -22%' },
-      { name: 'Сумка Laptop Bag 15"', category: '👜', rating: 4.5, price: 1899, oldPrice: 2499, tag: '💥 -24%' },
-      { name: 'Смартфон Nova X12 Pro', category: '📱', rating: 4.9, price: 12999, oldPrice: 15999, tag: '💥 -19%' },
+      { name: 'Ноутбук', category: '💻', rating: 4.9, price: 12999, tag: '🔥 Хіт' },
+      { name: 'Захисне скло', category: '📱', rating: 4.8, price: 299, tag: '💥 -20%' },
+      { name: 'Клавіатура', category: '⌨️', rating: 4.7, price: 899, tag: '⭐ Рекомендуємо' },
+      { name: 'Power bank', category: '🔋', rating: 4.6, price: 599, tag: '🔥 Хіт' },
+      { name: 'Шапка', category: '🧢', rating: 4.5, price: 399, tag: '💥 -15%' },
     ];
 
+    // ===== РЕНДЕРИНГ =====
     function renderCategories() {
       const el = document.getElementById('catGrid');
       if (!el) return;
@@ -425,7 +481,7 @@
       const el = document.getElementById('productGrid');
       if (!el) return;
       el.innerHTML = products.map((p, i) => {
-        const price = 4200 + (i * 1370 % 38000) + 2999;
+        const price = 500 + (i * 370 % 8000) + 99;
         const old = i % 3 === 0 ? price + Math.round(price * 0.18) : null;
         const tag = i % 4 === 0 ? '<span class="p-tag new">Новинка</span>' :
           i % 5 === 0 ? '<span class="p-tag">Хіт</span>' : '';
